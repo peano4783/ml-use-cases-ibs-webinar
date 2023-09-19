@@ -21,7 +21,7 @@ def gen_point_cloud(df):
             result_y.append(y + r * np.cos(angle))
     return pd.DataFrame({'x': result_x, 'y': result_y})
 
-def main(output_csv='../data/case1data.csv'):
+def main(output_csv='../data/clusters.csv'):
     init_df = init_data()
     df = gen_point_cloud(init_df)
     df.to_csv(output_csv, float_format='%.2f', index=False)
